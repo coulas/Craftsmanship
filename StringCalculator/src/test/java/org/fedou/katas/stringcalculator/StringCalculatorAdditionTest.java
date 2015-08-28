@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 
-import org.assertj.core.condition.Negative;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -37,7 +35,6 @@ public class StringCalculatorAdditionTest {
 				$("1,0", 1),
 				$("1,1", 2),
 				$("1,23", 24),
-				$("1, 23", 24),
 				$("1.2,3.4", 4.6));
 	}
 
@@ -50,7 +47,7 @@ public class StringCalculatorAdditionTest {
 
 	public Object[] parametersForShould_return_sum_when_given_any_numbers() {
 		return $(
-				$("1,0, 1", 2), 
+				$("1,0,1", 2), 
 				$("1,23,456", 480), 
 				$("0,1,2,3,4,5,6,7,8,9", 45));
 	}
