@@ -1,28 +1,29 @@
 package rental.movie;
 
 public class Movie {
+
+	public static final int  CHILDRENS = 2;
+	public static final int  REGULAR = 0;
+	public static final int  NEW_RELEASE = 1;
+
 	private String _title;
-	
-	private MoviePricing _priceCode;
-	
-	public Movie(String title, MoviePricing priceCode) {
+	private int _priceCode;
+
+	public Movie(String title, int priceCode) {
 		_title = title;
 		_priceCode = priceCode;
 	}
-	
-	public MoviePricing getPriceMaker() {
+
+	public int getPriceCode() {
 		return _priceCode;
 	}
-	
-	public String getTitle() {
+
+	public void setPriceCode(int arg) {
+		_priceCode = arg;
+	}
+
+	public String getTitle (){
 		return _title;
-	}
-	
-	public double makePrice(int daysRented) {
-		return _priceCode.makePrice(daysRented);
-	}
-	
-	public int makeFrequentRenterPoints(int daysRented) {
-		return _priceCode.makeFrequentRenterPoints(daysRented);
-	}
+	};
 }
+
