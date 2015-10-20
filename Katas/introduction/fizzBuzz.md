@@ -1,3 +1,6 @@
+# What to learn from this one ?
+You can discover a new way of working as this exercise have no difficulties by itself.
+
 # FizzBuzz
 
 You should implements a function String compute(String) which implements the following rules.

@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>introduction</module>
         <module>FizzBuzz</module>
         <module>FooBarQix</module>
         <module>LeapYears</module>
@@ -20,6 +21,8 @@
         <module>StringCalculator</module>
         <module>trip_service</module>
         <module>concurrency</module>
+        <module>../simpleTddPractice</module>
+        <module>refactoring</module>
     </modules>
 
     <properties>

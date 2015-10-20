@@ -13,3 +13,7 @@ It contains a study on finding all paths through a maze (aka kind of graph with 
 
 [from seven Concurrency Models in Seven Weeks](https://pragprog.com/titles/pb7con/source_code)
 
+[from Coding-dojos](http://codingdojo.org/cgi-bin/index.pl?KataCatalogue)
+
+[from cyber-dojo](http://cyber-dojo.org/)
+
