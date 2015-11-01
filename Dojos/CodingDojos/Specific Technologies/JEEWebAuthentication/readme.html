@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD><TITLE>Coding Dojo Wiki: KataJEEWebAuthentication</TITLE>
+<META NAME='KEYWORDS' CONTENT='Kata, JEEWeb, Authentication'/>
+</HEAD><BODY BGCOLOR="white">
+<div class=wikiheader><h1><a href="index.pl?FrontPage"><img src="/img/wiki.png" alt="[Home]" border=0></a><a href="index.pl?back=KataJEEWebAuthentication">KataJEEWebAuthentication</a></h1><a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+<hr class=wikilineheader></div><div class=wikitext><H1>Background</H1>
+
+<p>
+In this Kata, your a programmer at ABC Corp and you're making a new web app from scratch. After the head architect started working on this, it's now up to you to make sure these tasks are completed:
+<p>
+<UL >
+<li> allow authentication using request parameters (GET or POST)
+<li> all authentication/login attempts should be verified agains LDAP
+<li> successful logins should be recorded in the single sign on registry
+</UL>
+<p>
+However, you're not the only programmer (team) adressing this web app, so the LDAP is written by another team and what you have right now is this interface:
+<pre>
+ public interface LdapAuthenticationGateway {
+   boolean credentialsAreValid(String userName, String password);
+ }
+</pre>
+<p>
+and the single sign on registry is also written by another team, leaving you with this interface:
+<p>
+<pre> public interface SingleSignOnRegistry {
+   boolean tokenIsValid(String token);
+   String registerNewSession(String userName);
+   void endSession(String token);
+ }
+</pre>
+<p>
+Your job basically is to write one or more <tt>javax.servlet.Filter</tt> that handles incoming requests and act according to whether there's a cookie with a SSO token, username+password parameters etc.
+<p>
+It's assumed that there's some form of DependencyInjection<a href="index.pl?action=edit&id=DependencyInjection" class=wikipageedit>?</a> framework in place - to get a handle to the SingleSignOnRegistry<a href="index.pl?action=edit&id=SingleSignOnRegistry" class=wikipageedit>?</a> or the LdapAuthenticationGateway<a href="index.pl?action=edit&id=LdapAuthenticationGateway" class=wikipageedit>?</a>, you'll simply have to provide something like:
+<pre> public void setSingleSignOnRegistry(SingleSignOnRegistry registry) {
+   ...
+ }
+</pre>
+<p>
+<H1>About this kata</H1>
+
+This "real life" scenario has been used to demonstrate how mocking (using Mockito) can be useful. We've combined it with BDD and JDojo@Gbg will try to practice TDD using this kata (without mocking) next time around.
+<p>
+("Real life" is quoted - proper JEE authentication should be tied into the container etc etc ... The point with this exercise is that it's fairly easy to explain how it should work and what needs to be done here with "real" Java EE API:s, and then focus on the "How to develop" aspect (TDD), but also to show/talk about the difference between mocking and stubbing.)
+</div><hr class=wikilinefooter>
+<div class=wikifooter><form method="post" action="index.pl" enctype="application/x-www-form-urlencoded">
+<a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+This page is read-only | <a href="index.pl?action=history&id=KataJEEWebAuthentication">View other revisions</a><br>Last edited October 28, 2010 12:25 pm by <a href="index.pl?FredrikWendt" title="ID 9428 from 78.78.68.160">FredrikWendt</a> <a href="index.pl?action=browse&diff=1&id=KataJEEWebAuthentication">(diff)</a><br>Search: <input type="text" name="search"  size="20" /><input type="hidden" name="dosearch" value="1"  /></form></div>
+</body>
+</html>

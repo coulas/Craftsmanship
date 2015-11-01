@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD><TITLE>Coding Dojo Wiki: KataWordWrap</TITLE>
+<META NAME='KEYWORDS' CONTENT='Kata, Word, Wrap'/>
+</HEAD><BODY BGCOLOR="white">
+<div class=wikiheader><h1><a href="index.pl?FrontPage"><img src="/img/wiki.png" alt="[Home]" border=0></a><a href="index.pl?back=KataWordWrap">KataWordWrap</a></h1><a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+<hr class=wikilineheader></div><div class=wikitext>This kata is from Robert Martin and his blog includes a solution in Java<a href="http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html">[1]</a>.
+<p>
+<H2>Problem Description</H2>
+
+<p>
+You write a class called Wrapper, that has a single static function named wrap that takes two arguments, a string, and a column number.  The function returns the string, but with line breaks inserted at just the right places to make sure that no line is longer than the column number.  You try to break lines at word boundaries.
+<p>
+Like a word processor, break the line by replacing the last space in a line with a newline.
+<p>
+<p>
+<H2>Comments from those who are working on this Kata</H2>
+
+<p>
+Here you could write some thoughts about what you have learnt from this Kata.  If you want to discuss your approach and give some code samples, you might want to link to a new page "KataXByY<a href="index.pl?action=edit&id=KataXByY" class=wikipageedit>?</a>".  You don't have to post all the code of your solution, or claim that it is the best possible solution.  What is interesting is your insights into the problem, and decisions you made in the past.
+<p>
+<H3>Different Languages</H3>
+
+<UL >
+<li> Python classic recursive solution, code and some discussion <a href="http://mentalpandiculation.com/2011/01/word-wrap-kata-in-python/">[2]</a>
+<li> Ruby styled Regular Expression solution, code <a href="http://hg.code-cop.org/ruby-katas/src/tip/kata/word_wrap/20110713/">[3]</a>
+<li> Forth, code <a href="http://hg.code-cop.org/forth-katas/src/tip/kata/word_wrap/20101129-improved/">[4]</a> and feedback in the newsgroup <a href="https://groups.google.com/group/comp.lang.forth/browse_thread/thread/f026da51bc4968b2">[5]</a>
+<li> Java various solutions, code together with discussion <a href="http://blog.code-cop.org/2011/08/word-wrap-kata-variants.html">[6]</a>
+</UL>
+<p>
+<H3>Different Algorithms</H3>
+
+I (PeterKofler<a href="index.pl?action=edit&id=PeterKofler" class=wikipageedit>?</a>) did the kata several times in Java and tried a different variants each time. The different algorithms have increased complexity in code but reduce the number of allocations. See <a href="http://blog.code-cop.org/2011/08/word-wrap-kata-variants.html">[6]</a> for a detailed analysis of the variants together with code. It's nice to see how the solution changes from recursive to tail recursive to a loop which can be optimised even further. 
+<p>
+</div><hr class=wikilinefooter>
+<div class=wikifooter><form method="post" action="index.pl" enctype="application/x-www-form-urlencoded">
+<a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+This page is read-only | <a href="index.pl?action=history&id=KataWordWrap">View other revisions</a><br>Last edited December 20, 2011 11:00 pm by <a href="index.pl?PeterKofler" title="ID 13425 from 85-171-112-184.rev.numericable.fr">PeterKofler</a> <a href="index.pl?action=browse&diff=1&id=KataWordWrap">(diff)</a><br>Search: <input type="text" name="search"  size="20" /><input type="hidden" name="dosearch" value="1"  /></form></div>
+</body>
+</html>

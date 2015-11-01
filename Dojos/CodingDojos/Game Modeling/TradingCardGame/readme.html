@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD><TITLE>Coding Dojo Wiki: KataTradingCardGame</TITLE>
+<META NAME='KEYWORDS' CONTENT='Kata, Trading, Card, Game'/>
+</HEAD><BODY BGCOLOR="white">
+<div class=wikiheader><h1><a href="index.pl?FrontPage"><img src="/img/wiki.png" alt="[Home]" border=0></a><a href="index.pl?back=KataTradingCardGame">KataTradingCardGame</a></h1><a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+<hr class=wikilineheader></div><div class=wikitext>About this Kata
+<hr class=wikiline>
+<p>
+In this Kata you will be implementing a rudimentary two-player trading card game. The rules are loosely based on Blizzard Hearthstone (<a href="http://us.battle.net/hearthstone/en/">http://us.battle.net/hearthstone/en/</a>) which itself is an already much simpler and straight-forward game compared to other TCGs like <em>Magic: The Gathering</em> (<a href="http://www.wizards.com/magic/">http://www.wizards.com/magic/</a>).
+<p>
+Difficulty: Medium/Hard<a href="index.pl?action=edit&id=KataTradingCardGame/Hard" class=wikipageedit>?</a>
+<p>
+Good for teaching: Test Doubles, Mocking, TDD, Refactoring, Clean Code
+<p>
+Problem Description
+<hr class=wikiline>
+<p>
+1. Preparation
+<p>
+<UL >
+<li> Each player starts the game with 30 Health and 0 Mana slots
+<li> Each player starts with a deck of 20 Damage cards with the following Mana costs: 0,0,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,7,8
+<li> From the deck each player receives 3 random cards has his initial hand
+</UL>
+<p>
+2. Gameplay
+<p>
+<UL >
+<li> The active player receives 1 Mana slot up to a maximum of 10 total slots
+<li> The active player's empty Mana slots are refilled
+<li> The active player draws a random card from his deck
+<li> The active player can play as many cards as he can afford. Any played card empties Mana slots and deals immediate damage to the opponent player equal to its Mana cost.
+<li> If the opponent player's Health drops to or below zero the active player wins the game
+<li> If the active player can't (by either having no cards left in his hand or lacking sufficient Mana to pay for any hand card) or simply doesn't want to play another card, the opponent player becomes active
+</UL>
+<p>
+3. Special Rules
+<p>
+<UL >
+<li> Bleeding Out: If a player's card deck is empty before the game is over he receives 1 damage instead of drawing a card when it's his turn.
+<li> Overload: If a player draws a card that lets his hand size become &gt;5 that card is discarded instead of being put into his hand.
+<li> Dud Card: The 0 Mana cards can be played for free but don't do any damage either. They are just annoyingly taking up space in your hand.
+</UL>
+<p>
+Clues
+<hr class=wikiline>
+<p>
+When approached iteratively with TDD you can take different starting points, like the player state or the game loop. It is your own choice whether you implement the game for human or computer players - or both. Game visualization can be anything between System.out and a GUI. You can also increase the difficulty by adding more rules, like Healing cards, Damage independent from Mana cost or introducing individual Deck building. You will find some examples  of Advanced Variations from the Kata's author at <a href="https://github.com/bkimminich/kata-tcg">https://github.com/bkimminich/kata-tcg</a>. Even without extra rules the toughest part of this Kata might be coming up with actually smart CPU player decision-making algorithms.
+<p>
+Example Solution
+<hr class=wikiline>
+<p>
+<UL >
+<li> <a href="https://github.com/bkimminich/kata-tcg">https://github.com/bkimminich/kata-tcg</a> - Example solution in Java 8 from the Kata's author <a href="index.pl?BjoernKimminich" class=wikipagelink>BjoernKimminich</a>
+</UL>
+</div><hr class=wikilinefooter>
+<div class=wikifooter><form method="post" action="index.pl" enctype="application/x-www-form-urlencoded">
+<a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+This page is read-only | <a href="index.pl?action=history&id=KataTradingCardGame">View other revisions</a><br>Last edited November 13, 2014 4:32 pm by 192.168.59.3 <a href="index.pl?action=browse&diff=1&id=KataTradingCardGame">(diff)</a><br>Search: <input type="text" name="search"  size="20" /><input type="hidden" name="dosearch" value="1"  /></form></div>
+</body>
+</html>

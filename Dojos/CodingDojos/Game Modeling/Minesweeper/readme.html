@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD><TITLE>Coding Dojo Wiki: KataMinesweeper</TITLE>
+<META NAME='KEYWORDS' CONTENT='Kata, Minesweeper'/>
+</HEAD><BODY BGCOLOR="white">
+<div class=wikiheader><h1><a href="index.pl?FrontPage"><img src="/img/wiki.png" alt="[Home]" border=0></a><a href="index.pl?back=KataMinesweeper">KataMinesweeper</a></h1><a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+<hr class=wikilineheader></div><div class=wikitext><b>About this Kata</b>
+<p>
+Kata originated here: acm.uva.es/p/v101/10189.html
+<p>
+Difficulty: Easy
+<p>
+<b>Problem Description</b>
+<p>
+Have you ever played Minesweeper? It's a cute little game which comes within a certain Operating System whose name we can't really remember. Well, the goal of the game is to find all the mines within an MxN field. To help you, the game shows a number in a square which tells you how many mines there are adjacent to that square. For instance, take the following 4x4 field with 2 mines (which are represented by an * character):
+<p>
+<pre>
+*...
+....
+.*..
+....
+</pre>
+The same field including the hint numbers described above would look like this:
+<pre>
+*100
+2210
+1*10
+1110
+</pre>
+You should write a program that takes input as follows:
+<p>
+The input will consist of an arbitrary number of fields. The first line of each field contains two integers n and m (0 &lt; n,m &lt;= 100) which stands for the number of lines and columns of the field respectively. The next n lines contains exactly m characters and represent the field. Each safe square is represented by an "." character (without the quotes) and each mine square is represented by an "*" character (also without the quotes). The first field line where n = m = 0 represents the end of input and should not be processed.
+<p>
+Your program should produce output as follows:
+<p>
+For each field, you must print the following message in a line alone:
+<p>
+Field #x:
+<p>
+Where x stands for the number of the field (starting from 1). The next n lines should contain the field with the "." characters replaced by the number of adjacent mines to that square. There must be an empty line between field outputs.
+<p>
+<b>Clues</b>
+<p>
+As you may have already noticed, each square may have at most 8 adjacent squares.
+<p>
+<b>Suggested Test Cases</b>
+<p>
+This is the acceptance test input:
+<pre>
+4 4
+*...
+....
+.*..
+....
+3 5
+**...
+.....
+.*...
+0 0
+</pre>
+and output:
+<pre>
+Field #1:
+*100
+2210
+1*10
+1110
+
+Field #2:
+**100
+33200
+1*100
+</pre>
+<p>
+<hr class=wikiline>
+<p>
+<b>Comments from those who are working on this Kata</b>
+<p>
+This Kata was tackled at the <a href="index.pl?SaoPauloDojo" class=wikipagelink>SaoPauloDojo</a> and results described <a href="index.pl?2007Aug29SPDojo" class=wikipagelink>here</a>.
+<p>
+The Kata was done by <a href="index.pl?YouDevise" class=wikipagelink>YouDevise</a> and results described at tinyurl.com/6falq7
+<p>
+The Kata was done by Songkick.com and the test framework and solution posted at github.com/mattwynne/software-craftsmanship-katas/tree/master/minesweeper
+<p>
+Macluq has posted his solution on Github : <a href="https://github.com/macluq/KataMinesweeper">https://github.com/macluq/KataMinesweeper</a>
+</div><hr class=wikilinefooter>
+<div class=wikifooter><form method="post" action="index.pl" enctype="application/x-www-form-urlencoded">
+<a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+This page is read-only | <a href="index.pl?action=history&id=KataMinesweeper">View other revisions</a><br>Last edited November 2, 2014 12:46 pm by 192.168.59.3 <a href="index.pl?action=browse&diff=1&id=KataMinesweeper">(diff)</a><br>Search: <input type="text" name="search"  size="20" /><input type="hidden" name="dosearch" value="1"  /></form></div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD><TITLE>Coding Dojo Wiki: KataRomanCalculator</TITLE>
+<META NAME='KEYWORDS' CONTENT='Kata, Roman, Calculator'/>
+</HEAD><BODY BGCOLOR="white">
+<div class=wikiheader><h1><a href="index.pl?FrontPage"><img src="/img/wiki.png" alt="[Home]" border=0></a><a href="index.pl?back=KataRomanCalculator">KataRomanCalculator</a></h1><a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+<hr class=wikilineheader></div><div class=wikitext><b>About this Kata</b>
+<p>
+<a href="index.pl?CodersDojoSweden" class=wikipagelink>CodersDojoSweden</a>, running in Linköping, was looking for a new Kata which was sufficiently simple to get beginners up and running. <a href="index.pl?ThomasNilsson" class=wikipagelink>ThomasNilsson</a> suggested a calculator using Roman numerals.
+<p>
+<b>Problem Description</b>
+<p>
+"As a Roman Bookkeeper I want to add Roman numbers because doing it manually is too tedious." Given the Roman numerals, (IVXLCDM which means one, five, ten, fifty, hundred, fivehundred and a thousand respectively), create two numbers and add them. As we are in Rome there is no such thing as decimals or int, we need to do this with the strings. An example would be "XIV" + "LX" = "LXXIV"
+<p>
+There are some rules to a Roman number:
+<p>
+<UL >
+<li> Numerals can be concatenated to form a larger numeral ("XX" + "II" = "XXII")
+<li> If a lesser numeral is put before a bigger it means subtraction of the lesser from the bigger ("IV" means four, "CM" means ninehundred)
+<li> If the numeral is I, X or C you can't have more than three ("II" + "II" = "IV")
+<li> If the numeral is V, L or D you can't have more than one ("D" + "D" = "M")
+</UL>
+<p>
+<b>Clues</b>
+<p>
+String grouping and concatenation is key to solving this kata. But remember the rule that lesser numerals can preceede bigger ones.
+<p>
+<b>Suggested Test Cases</b>
+<p>
+The first test case(s) are pretty easy. I won't put the test cases here since I feel this kata is one of the better ones I have done when it comes to practicing finding out what the next test case is.
+<p>
+<b>Comments from those who are working on this Kata</b>
+<p>
+When I invented it I did not know how well it would work. I was pleasantly surprised to see it work out to be a kata very focused on finding test cases. -- <a href="index.pl?ThomasNilsson" class=wikipagelink>ThomasNilsson</a>
+<p>
+<hr class=wikiline>
+<p>
+This kata does not immediately show the "behaviour" aspect as does e.g. the Bowling kata. By this I mean the behaviour of a class under test, as opposed to testdriving a single method. However, in the Linköping dojo, we decided on adding this aspect by changing the story to "As a Polish born Roman Accountant..." and thereby introducing the Polish reverse notation to the calculation. The first test would then become:
+<p>
+<p>
+<PRE >
+ public void testOnePlusOneShouldEqualTwo() {
+    RomanPolishCalculator calculator = new RomanPolishCalculator();
+    calculator.enter("I");
+    calculator.enter("I");
+    assertEquals("II", calculator.add());
+ }
+</PRE>
+<p>
+And we also decided to add this aspect on an already running partial solution in the middle of the kata. This creates the situation of refactoring the API into another structure. We'll see how this turns out.  -- <a href="index.pl?ThomasNilsson" class=wikipagelink>ThomasNilsson</a>
+<p>
+<hr class=wikiline>
+<p>
+<em>Here is a CoffeeScript<a href="index.pl?action=edit&id=CoffeeScript" class=wikipageedit>?</a> implementation (both forward and backwards).</em>
+<p>
+<em>I've just been learning CS and working with Node.js, npm, and Grunt. Here's a link to my GitHub<a href="index.pl?action=edit&id=GitHub" class=wikipageedit>?</a> where it's hosted : https://github.com/tebriel/RomanNumeralConverterKata</em> 
+<p>
+--ChrisMoultrie<a href="index.pl?action=edit&id=ChrisMoultrie" class=wikipageedit>?</a>.
+</div><hr class=wikilinefooter>
+<div class=wikifooter><form method="post" action="index.pl" enctype="application/x-www-form-urlencoded">
+<a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+This page is read-only | <a href="index.pl?action=history&id=KataRomanCalculator">View other revisions</a><br>Last edited November 25, 2012 4:58 pm by <a href="index.pl?EmmanuelGaillot" title="ID 13425 from 85-171-104-123.rev.numericable.fr">EmmanuelGaillot</a> <a href="index.pl?action=browse&diff=1&id=KataRomanCalculator">(diff)</a><br>Search: <input type="text" name="search"  size="20" /><input type="hidden" name="dosearch" value="1"  /></form></div>
+</body>
+</html>

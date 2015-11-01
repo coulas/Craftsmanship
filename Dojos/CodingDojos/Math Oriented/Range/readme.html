@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD><TITLE>Coding Dojo Wiki: KataRange</TITLE>
+<META NAME='KEYWORDS' CONTENT='Kata, Range'/>
+</HEAD><BODY BGCOLOR="white">
+<div class=wikiheader><h1><a href="index.pl?FrontPage"><img src="/img/wiki.png" alt="[Home]" border=0></a><a href="index.pl?back=KataRange">KataRange</a></h1><a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+<hr class=wikilineheader></div><div class=wikitext>Range has a lot of nifty issues.
+<p>
+<UL >
+<li> integer range contains
+</UL>
+[2,6) contains {2,4}
+<p>
+[2,6) doesn't contain {-1,1,6,10}
+<p>
+<UL >
+<li> getAllPoints<a href="index.pl?action=edit&id=AllPoints" class=wikipageedit>?</a>
+</UL>
+[2,6) allPoints = {2,3,4,5}
+<p>
+<UL >
+<li> ContainsRange<a href="index.pl?action=edit&id=ContainsRange" class=wikipageedit>?</a>
+</UL>
+[2,5) doesn't contain [7,10)
+<p>
+[2,5) doesn't contain [3,10)
+<p>
+[3,5) doesn't contain [2,10)
+<p>
+[2,10) contains [3,5]
+<p>
+[3,5] contains [3,5)
+<p>
+<UL >
+<li> endPoints
+</UL>
+[2,6) allPoints = {2,3,4,5}
+<p>
+[2,6] allPoints = {2,3,4,5,6}
+<p>
+(2,6) allPoints = {3,4,5}
+<p>
+(2,6] allPoints = {3,4,5,6}
+<p>
+<UL >
+<li> overlapsRange
+</UL>
+[2,5) doesn't overlap with [7,10)
+<p>
+[2,10) overlaps with [3,5)
+<p>
+[3,5) overlaps with [3,5)
+<p>
+[2,5) overlaps with [3,10)
+<p>
+[3,5) overlaps with [2,10)
+<p>
+<UL >
+<li> Equals
+</UL>
+[3,5) equals [3,5)
+<p>
+[2,10) neq [3,5)
+<p>
+[2,5) neq [3,10)
+<p>
+[3,5) neq [2,10)
+</div><hr class=wikilinefooter>
+<div class=wikifooter><form method="post" action="index.pl" enctype="application/x-www-form-urlencoded">
+<a href="index.pl?FrontPage" class=wikipagelink>FrontPage</a> | <a href="index.pl?RecentChanges" class=wikipagelink>RecentChanges</a> | <a href="index.pl?action=editprefs">Preferences</a><br>
+This page is read-only | <a href="index.pl?action=history&id=KataRange">View other revisions</a><br>Last edited December 8, 2009 4:09 am by dslb-094-217-106-114.pools.arcor-ip.net <a href="index.pl?action=browse&diff=1&id=KataRange">(diff)</a><br>Search: <input type="text" name="search"  size="20" /><input type="hidden" name="dosearch" value="1"  /></form></div>
+</body>
+</html>
