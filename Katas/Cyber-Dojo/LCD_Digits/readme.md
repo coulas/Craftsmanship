@@ -3,15 +3,18 @@ integer value using a 3x3 grid of space, underscore, and
 pipe characters for each digit. Each digit is shown below 
 (using a dot instead of a space)
 
-._.   ...   ._.   ._.   ...   ._.   ._.   ._.   ._.   ._.
-|.|   ..|   ._|   ._|   |_|   |_.   |_.   ..|   |_|   |_|
-|_|   ..|   |_.   ._|   ..|   ._|   |_|   ..|   |_|   ..|
-
+<code>
+._.   ...   ._.   ._.   ...   ._.   ._.   ._.   ._.   ._. <br/>
+|.|   ..|   ._|   ._|   |_|   |_.   |_.   ..|   |_|   |_| <br/>
+|_|   ..|   |_.   ._|   ..|   ._|   |_|   ..|   |_|   ..| <br/>
+</code>
 
 Example: 910
 
-._. ... ._.
-|_| ..| |.|
-..| ..| |_|
+<code>
+._. ... ._. <br/>
+|_| ..| |.| <br/>
+..| ..| |_| <br/>
+</code>
 
 
