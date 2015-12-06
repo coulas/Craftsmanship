@@ -1,28 +1,29 @@
-# Sources
+# What to expect from each Kata.
+
+As a good consultant, I may tell you it depends !
+Actually, many correct and good implementations can be done for each Katas.
+So results does vary widely.
+
+Most Kata where done to allow discovery and learning.
+You can always expect few features only to implement and they will still make you think.
+The aim is not in solving kata's need, but to slow down and learn on how you solve it and doing it perfectly according to your own taste.
+
+Above facts means that even if I expect things to happen with a kata, it may not happen to every one.
+So category will only be about :
+   * Where do I Begin ? the answer being by the introduction !
+   * Green fields Kata (aka TDD) : simple features without stack or existing code as constraint so you can implement them they way you want.
+   * Brown fields Kata (aka Refactoring) : simple features also but with an existing code base that will constrain you as you may encounter in real projects.
 
 ## Introduction
-Introduction are well known Katas used as first exercises to make a contact with some new practices or to demo them in live coding.
-Another way to put it, they are the shortest exercises, I know.
+Introduction contains well known Katas used as first exercises to make a contact with some new practices or to demo them in live coding.
+Another way to put it, they are the shortest useful exercises, I know.
 
-## Cyber-dojo
-[from cyber-dojo](http://cyber-dojo.org/) :
-You'll have almost all public green field katas here.
-Green field means without starting code.
-Usually, refactoring katas starts from existing code and are described as brown field.
+## raw-sources
+It contains local copies of exercises took from public and freely accessible sources.
+Content that may be copyrighted and publicly accessible is here as a backup for personal use.
 
 ## Test Driven Development
-The TDD directory contains green field Kata that are either public and not yet in cyber-dojo, or copyrighted katas.
+The TDD directory contains green field Katas.
 
 ## Refactoring
-This directory contains brownfield katas that aim at testing, refactoring and cleaning existing code.
-
-## Concurrency
-Concurrency is hard to develop ANd hard to test.
-Hopefully we rarely need it.
-The concurrency problem appears only when you have a shared mutable state, so :
-
-1. Do not share a mutable state
-2. Make a shared state immutable
-3. Share objects that have no states
-
-If you can't make it, you'll have a problem to guaranty consistent shared mutable states...
+The Refactoring directory contains brownfield katas that aim at testing, refactoring and cleaning existing code.

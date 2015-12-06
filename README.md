@@ -16,12 +16,12 @@ Here, I lists all exercises that I found useful to me or that I plan to use for 
 
 ## it is based on Katas and Dojos'exercises
 
-Katas are exercises with few functionnalities (I didn't said easy).
+Katas are exercises with few functionality (I didn't said easy).
 They shall take one or a few hours to both solve and explore.
-Dojos are exrecises that goes beyond a Kata.
-Usualy, after a kata like work, you will have a last requirement that will be challenging your mind.
+Dojos are exercises that goes beyond a Kata.
+Usually, after a kata like work, you will have a last requirement that will be challenging your mind.
 
-Each exercises has been created by someone who I am thankfull for.
+Each exercises has been created by someone who I am thankful for.
 This repo is catalogue for my personal use and you are mostly on your own to use it.
 Content that is not copyrighted may be public or not claimed.
 I may use this content in my own work/trainings.
@@ -29,7 +29,7 @@ Some content is copyrighted by its own author and I will not use them to train o
 You should use the copyright information to find the original source, website, author and learn from there.
 I will not provide context or any information on copyrigthed exercises except their source and owner.
 
-All thoses exercises come from peers and were found publicly accessible on the world wild web.
+All theses exercises come from peers and were found publicly accessible on the world wild web.
 Even if I try to provide my sources, I may find them on a site that reuse an exercise.
 Worse, some are so well known that they appear on many repos/website/whatever.
 Do not hesitate to claim ownership for you or for any other that may be the real author.

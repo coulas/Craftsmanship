@@ -4,6 +4,7 @@ with the supplied letter at the widest point.
 
 For example: print-diamond 'E' prints
 
+
     A
    B B
   C   C

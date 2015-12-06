@@ -1,6 +1,3 @@
-# what to learn from this one ?
-dfg
-
 # Leap Years, Gregorian Calendar
 
 Write a function that returns true or false depending on wheter its input integer is a leap year or not.
