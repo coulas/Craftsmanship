@@ -1,4 +1,5 @@
 # String Calculator
+[A kata from Roy Osherove](http://osherove.com/tdd-kata-1/)
 
 ## 1. First step
 
