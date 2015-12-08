@@ -1,5 +1,7 @@
 # Roman Numerals
 
+## Part 1 : convert an arabic number to a roman one
+
 Given a positive integer number (eg 42) determine
 its Roman numeral representation as a String (eg "XLII").
 
@@ -25,4 +27,6 @@ Examples:
 2008 -> "MMVIII" (2000 -> "MM" + 8 -> "VIII")<br/>
   99 -> "XCIX"   (90 -> "XC" + 9 -> "IX")<br/>
   47 -> "XLVII"  (40 -> "XL" + 7 -> "VII")<br/>
+
+## Part 2 : convert an roman number to an arabic one
 
