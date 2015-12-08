@@ -19,7 +19,6 @@ You may use each as the main algorithm and try to state after why it matters.
 
 
 ### Print diamond
-@see google, it is a rcent one and should find and name the author
 A simple need, hard to do well.
 You should work on emerging design here.
 By adding test, duplication of code is visible, try to make them really identical to factorise it.
