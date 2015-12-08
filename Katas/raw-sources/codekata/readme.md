@@ -1,1 +1,0 @@
-[codekata](http://codekata.com/)
