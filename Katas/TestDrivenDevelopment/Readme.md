@@ -11,7 +11,6 @@ Those conversions are not trivial, similar in functionality (from arabic to roma
 You may need more than one object to implement them nicely.
 
 ### Bowling Game
-@see Uncle Bob (ok, every one knows it)
 You have to calculate the score of a bowling game.
 Score in a frame depends on future bonus balls and that may be sensible.
 Be sure to test correctly your features before moving on to the next one.
@@ -24,4 +23,8 @@ You may use each as the main algorithm and try to state after why it matters.
 A simple need, hard to do well.
 You should work on emerging design here.
 By adding test, duplication of code is visible, try to make them really identical to factorise it.
+
+### Berlin Clock
+You will have to convert hours and minutes in four lines of text representing state of lamps.
+Each lines represent a part of the global state, and you will have to figure out how to test these kinds of complex state.
 
