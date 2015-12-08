@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:jsp="http://www.w3.org/2001/XMLSchema">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agile Katas Berlin Clock Kata - Write a time converter, that will take a digital time representation and convert it to a Berlin Clock textual representation.">
+    <meta name="author" content="Sean O'Toole">
+    <link rel="shortcut icon" href="/static/ico/BerlinClockKata.png">
+
+    <title>Berlin Clock Kata | Agile Katas</title>
+
+    <link rel="stylesheet" href="/static/css/style.min.css">
+</head>
+<body>
+<nav id="navigation" class="navigation katas">
+    <div class="container">
+        <ul>
+            <li >
+                <a href="/">Agile Katas</a>
+            </li>
+            <li class="active">
+                <a href="/katas">Katas</a>
+            </li>
+            <li >
+                <a href="/learn">Learn</a>
+            </li>
+            <li >
+                <a href="/about">About</a>
+            </li>
+            <li >
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+        <a href="#" id="pull">Menu</a>
+    </div>
+</nav>
+<div class="container">
+    <h1>Berlin Clock Kata</h1>
+
+    <div class="description">
+        <img src="/static/img/katas/kata_berlinclock.png" alt="Berlin Clock Kata" align="left"/>
+        <p>The Berlin Clock (Mengenlehreclock or Berlin Uhr) is a clock that tells the time using a series of illuminated coloured blocks, as you can see in the picture for this project.</p>
+        <p>The top lamp blinks to show seconds- it is illuminated on even seconds and off on odd seconds.</p>
+        <p>The next two rows represent hours. The upper row represents 5 hour blocks and is made up of 4 red lamps. The lower row represents 1 hour blocks and is also made up of 4 red lamps.</p>
+        <p>The final two rows represent the minutes. The upper row represents 5 minute blocks, and is made up of 11 lamps- every third lamp is red, the rest are yellow. The bottom row represents 1 minute blocks, and is made up of 4 yellow lamps.</p>
+        </div>
+    <hr>
+    <div class="features">
+        <div class="feature">
+    <h2>Feature 1 - Converting Digital Time to Berlin Time</h2>
+
+    <p>
+        So what we want first is a way to get a textual representation of a Berlin Clock time based on a digital time. This is so we can use this converter everywhere, all we have to do is hook up a frontend. We're going to be going over the clock row by row to make things clearer and ensure we get everything right first time.</p>
+    <div class="row"><div class="card">
+    <h3>Implement the Single Minutes Row</h3>
+    <div class="card-contents">
+        <p>
+            As a clock user<br/>I want to be able to see single minutes<br/>So that I can accurately tell the time down to the minute</p>
+        <ul>
+            <li>
+    Given I have started the converter<br/>When I enter $time<br/>Then $row is returned for the single minutes row</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Time</th>
+                <th>Row</th>
+                </tr>
+        <tr>
+                <td>00:00:00</td>
+                <td>OOOO</td>
+                </tr>
+        <tr>
+                <td>23:59:59</td>
+                <td>YYYY</td>
+                </tr>
+        <tr>
+                <td>12:32:00</td>
+                <td>YYOO</td>
+                </tr>
+        <tr>
+                <td>12:34:00</td>
+                <td>YYYY</td>
+                </tr>
+        <tr>
+                <td>12:35:00</td>
+                <td>OOOO</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div><div class="card">
+    <h3>Implement the Five Minutes Row</h3>
+    <div class="card-contents">
+        <p>
+            As a clock user<br/>I want to be able to see five minutes<br/>So that I can tell higher minute amounts more easily at a glance</p>
+        <ul>
+            <li>
+    Given I have started the converter<br/>When I enter $time<br/>Then $row is returned for the five minutes row</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Time</th>
+                <th>Row</th>
+                </tr>
+        <tr>
+                <td>00:00:00</td>
+                <td>OOOOOOOOOOO</td>
+                </tr>
+        <tr>
+                <td>23:59:59</td>
+                <td>YYRYYRYYRYY</td>
+                </tr>
+        <tr>
+                <td>12:04:00</td>
+                <td>OOOOOOOOOOO</td>
+                </tr>
+        <tr>
+                <td>12:23:00</td>
+                <td>YYRYOOOOOOO</td>
+                </tr>
+        <tr>
+                <td>12:35:00</td>
+                <td>YYRYYRYOOOO</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div><div class="row"><div class="card">
+    <h3>Implement the Single Hours Row</h3>
+    <div class="card-contents">
+        <p>
+            As a clock user<br/>I want to be able to see single hours<br/>So that I can tell what hour it is</p>
+        <ul>
+            <li>
+    Given I have started the converter<br/>When I enter $time<br/>Then $row is returned for the single hours row</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Time</th>
+                <th>Row</th>
+                </tr>
+        <tr>
+                <td>00:00:00</td>
+                <td>OOOO</td>
+                </tr>
+        <tr>
+                <td>23:59:59</td>
+                <td>RRRO</td>
+                </tr>
+        <tr>
+                <td>02:04:00</td>
+                <td>RROO</td>
+                </tr>
+        <tr>
+                <td>08:23:00</td>
+                <td>RRRO</td>
+                </tr>
+        <tr>
+                <td>14:35:00</td>
+                <td>RRRR</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div><div class="card">
+    <h3>Implement the Five Hours Row</h3>
+    <div class="card-contents">
+        <p>
+            As a clock user<br/>I want to be able to see five hours<br/>So that I can tell higher hour amounts more easily at a glance</p>
+        <ul>
+            <li>
+    Given I have started the converter<br/>When I enter $time<br/>Then $row is returned for the five hours row</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Time</th>
+                <th>Row</th>
+                </tr>
+        <tr>
+                <td>00:00:00</td>
+                <td>OOOO</td>
+                </tr>
+        <tr>
+                <td>23:59:59</td>
+                <td>RRRR</td>
+                </tr>
+        <tr>
+                <td>02:04:00</td>
+                <td>OOOO</td>
+                </tr>
+        <tr>
+                <td>08:23:00</td>
+                <td>ROOO</td>
+                </tr>
+        <tr>
+                <td>16:35:00</td>
+                <td>RRRO</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div><div class="row"><div class="card">
+    <h3>Implement the Seconds Lamp</h3>
+    <div class="card-contents">
+        <p>
+            As a clock user<br/>I want to be able to see seconds passing<br/>So that I can see if my clock is working at a glance</p>
+        <ul>
+            <li>
+    Given I have started the converter<br/>When I enter $time<br/>Then $lamp is returned for the seconds lamp</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Time</th>
+                <th>Row</th>
+                </tr>
+        <tr>
+                <td>00:00:00</td>
+                <td>Y</td>
+                </tr>
+        <tr>
+                <td>23:59:59</td>
+                <td>O</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div><div class="card">
+    <h3>Integrate the Entire Berlin Clock</h3>
+    <div class="card-contents">
+        <p>
+            As a clock user<br/>I want to be able to see an entire clock<br/>So that I can tell what time it is at a glance</p>
+        <ul>
+            <li>
+    Given I have started the converter<br/>When I enter $time<br/>Then $clock is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Time</th>
+                <th>Clock</th>
+                </tr>
+        <tr>
+                <td>00:00:00</td>
+                <td>YOOOOOOOOOOOOOOOOOOOOOOO</td>
+                </tr>
+        <tr>
+                <td>23:59:59</td>
+                <td>ORRRRRRROYYRYYRYYRYYYYYY</td>
+                </tr>
+        <tr>
+                <td>16:50:06</td>
+                <td>YRRROROOOYYRYYRYYRYOOOOO</td>
+                </tr>
+        <tr>
+                <td>11:37:01</td>
+                <td>ORROOROOOYYRYYRYOOOOYYOO</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     data-ad-client="ca-pub-5205110041821805"
+     data-ad-slot="5912700779"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script><div class="feature">
+    <h2>Feature 2 - Converting Berlin Time to Digital Time</h2>
+
+    <p>
+        The change to using Berlin Time has gone so well that we've decided to introduce it everywhere, from the clocks on the microwaves to the company-approved wristwatches. Unfortunately, people are having trouble quickly deciphering the current time which is having a detrimental effect on productivity. As such, we need to create a converter that takes a Berlin Time and returns a Digital Time.</p>
+    <div class="row"><div class="card">
+    <h3>Convert Berlin Time to Digital Time</h3>
+    <div class="card-contents">
+        <p>
+            As a Berlin Clock user<br/>I want to be able to convert a Berlin Time to a Digital Time<br/>So that I can tell what time it is more easily</p>
+        <ul>
+            <li>
+    Given I have started the converter<br/>When I enter a $berlinTime<br/>Then $digitalTime is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Clock</th>
+                <th>Time</th>
+                </tr>
+        <tr>
+                <td>YOOOOOOOOOOOOOOOOOOOOOOO</td>
+                <td>00:00:00</td>
+                </tr>
+        <tr>
+                <td>ORRRRRRROYYRYYRYYRYYYYYY</td>
+                <td>23:59:59</td>
+                </tr>
+        <tr>
+                <td>YRRROROOOYYRYYRYYRYOOOOO</td>
+                <td>16:50:06</td>
+                </tr>
+        <tr>
+                <td>ORROOROOOYYRYYRYOOOOYYOO</td>
+                <td>11:37:01</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div></div></div>
+</div>
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://agilekatas.co.uk/cookies","theme":"dark-bottom"};
+</script>
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/cookieConsent.js"></script>
+<script type="text/javascript" src="/static/js/navigation.js"></script>
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript" src="/static/js/ajaxPost.js"></script>
+<script type="text/javascript" src="/static/js/contactForm.js"></script>
+<script type="text/javascript" src="/static/js/subscribeForm.js"></script>
+<script src="/static/js/kataTestCases.js"></script>
+</body>
+</html>

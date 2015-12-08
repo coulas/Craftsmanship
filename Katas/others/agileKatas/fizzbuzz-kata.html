@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:jsp="http://www.w3.org/2001/XMLSchema">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agile Katas Fizz Buzz Kata - Write an extended game version of Fizz Buzz, which will have an extended rule set and user customisable rules for playing.">
+    <meta name="author" content="Sean O'Toole">
+    <link rel="shortcut icon" href="/static/ico/FizzBuzzKata.png">
+
+    <title>Fizz Buzz Kata | Agile Katas</title>
+
+    <link rel="stylesheet" href="/static/css/style.min.css">
+</head>
+<body>
+<nav id="navigation" class="navigation katas">
+    <div class="container">
+        <ul>
+            <li >
+                <a href="/">Agile Katas</a>
+            </li>
+            <li class="active">
+                <a href="/katas">Katas</a>
+            </li>
+            <li >
+                <a href="/learn">Learn</a>
+            </li>
+            <li >
+                <a href="/about">About</a>
+            </li>
+            <li >
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+        <a href="#" id="pull">Menu</a>
+    </div>
+</nav>
+<div class="container">
+    <h1>Fizz Buzz Kata</h1>
+
+    <div class="description">
+        <img src="/static/img/katas/kata_fizzbuzz.png" alt="Fizz Buzz Kata" align="left"/>
+        <p>Fizz Buzz is a counting and number substitution game mainly aimed at teaching children division. Players take turns counting up from one, replacing any number that is divisible by three with the word 'fizz', any number divisible by five with the word 'buzz', and any number divisible by both three and five to be replaced with 'fizz buzz'.</p>
+        </div>
+    <hr>
+    <div class="features">
+        <div class="feature">
+    <h2>Feature 1 - Basic Fizz Buzz Scoring</h2>
+
+    <p>
+        You'll be getting used to this by now. Once again, we need a backend for the game that can correctly score the game we're implementing on the front end. It needs to be a reusable library that simply takes a number, and returns the correct answer for that number- whether that is the number itself, 'fizz', 'buzz', or 'fizz buzz'.</p>
+    <div class="row"><div class="card">
+    <h3>Normal Numbers Return Same Number</h3>
+    <div class="card-contents">
+        <p>
+            As a games designer<br/>I want a normal number to return that number<br/>So that the game can be scored according to the rules</p>
+        <ul>
+            <li>
+    Given I have started the game<br/>When I enter $number<br/>Then $result is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Result</th>
+                </tr>
+        <tr>
+                <td>1</td>
+                <td>1</td>
+                </tr>
+        <tr>
+                <td>2</td>
+                <td>2</td>
+                </tr>
+        <tr>
+                <td>4</td>
+                <td>4</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div><div class="card">
+    <h3>Multiples of Three Return Fizz</h3>
+    <div class="card-contents">
+        <p>
+            As a games designer<br/>I want a multiple of three to return 'fizz'<br/>So that the game can be scored according to the rules</p>
+        <ul>
+            <li>
+    Given I have started the game<br/>When I enter $number<br/>Then $result is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Result</th>
+                </tr>
+        <tr>
+                <td>3</td>
+                <td>fizz</td>
+                </tr>
+        <tr>
+                <td>9</td>
+                <td>fizz</td>
+                </tr>
+        <tr>
+                <td>123</td>
+                <td>fizz</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div><div class="row"><div class="card">
+    <h3>Multiples of Five Return Buzz</h3>
+    <div class="card-contents">
+        <p>
+            As a games designer<br/>I want a multiple of five to return 'buzz'<br/>So that the game can be scored according to the rules</p>
+        <ul>
+            <li>
+    Given I have started the game<br/>When I enter $number<br/>Then $result is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Result</th>
+                </tr>
+        <tr>
+                <td>5</td>
+                <td>buzz</td>
+                </tr>
+        <tr>
+                <td>20</td>
+                <td>buzz</td>
+                </tr>
+        <tr>
+                <td>200</td>
+                <td>buzz</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div><div class="card">
+    <h3>Multiples of Three and Five Return Fizz Buzz</h3>
+    <div class="card-contents">
+        <p>
+            As a games designer<br/>I want a multiple of three and five to return 'fizz buzz'<br/>So that the game can be scored according to the rules</p>
+        <ul>
+            <li>
+    Given I have started the game<br/>When I enter $number<br/>Then $result is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Result</th>
+                </tr>
+        <tr>
+                <td>15</td>
+                <td>fizz buzz</td>
+                </tr>
+        <tr>
+                <td>45</td>
+                <td>fizz buzz</td>
+                </tr>
+        <tr>
+                <td>315</td>
+                <td>fizz buzz</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     data-ad-client="ca-pub-5205110041821805"
+     data-ad-slot="5912700779"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script><div class="feature">
+    <h2>Feature 2 - Playing FizzBuzz Variations</h2>
+
+    <p>
+        Turns out that Fizz Buzz has a whole bunch of variants that people play in different countries and for different ages of children. One of the most interesting we have seen is Fizz Buzz Pop, where the word 'pop' is substituted for numbers that are a multiple of seven. We want you to extend the rules of our current Fizz Buzz game to allow players to play Fizz Buzz Pop instead.</p>
+    <div class="row"><div class="card">
+    <h3>Multiples of Seven Return Pop</h3>
+    <div class="card-contents">
+        <p>
+            As a games designer<br/>I want a multiple of seven to return 'pop'<br/>So that the game can be scored according to the rules</p>
+        <ul>
+            <li>
+    Given I have started the game<br/>When I enter $number<br/>Then $result is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Result</th>
+                </tr>
+        <tr>
+                <td>7</td>
+                <td>pop</td>
+                </tr>
+        <tr>
+                <td>28</td>
+                <td>pop</td>
+                </tr>
+        <tr>
+                <td>77</td>
+                <td>pop</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div><div class="card">
+    <h3>Multiples of Three and Seven Return Fizz Pop</h3>
+    <div class="card-contents">
+        <p>
+            As a games designer<br/>I want a multiple of three and seven to return 'fizz pop'<br/>So that the game can be scored according to the rules</p>
+        <ul>
+            <li>
+    Given I have started the game<br/>When I enter $number<br/>Then $result is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Result</th>
+                </tr>
+        <tr>
+                <td>21</td>
+                <td>fizz pop</td>
+                </tr>
+        <tr>
+                <td>63</td>
+                <td>fizz pop</td>
+                </tr>
+        <tr>
+                <td>126</td>
+                <td>fizz pop</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div><div class="row"><div class="card">
+    <h3>Multiples of Five and Seven Return Buzz Pop</h3>
+    <div class="card-contents">
+        <p>
+            As a games designer<br/>I want a multiple of five and seven to return 'buzz pop'<br/>So that the game can be scored according to the rules</p>
+        <ul>
+            <li>
+    Given I have started the game<br/>When I enter $number<br/>Then $result is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Result</th>
+                </tr>
+        <tr>
+                <td>35</td>
+                <td>buzz pop</td>
+                </tr>
+        <tr>
+                <td>70</td>
+                <td>buzz pop</td>
+                </tr>
+        <tr>
+                <td>140</td>
+                <td>buzz pop</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div><div class="card">
+    <h3>Multiples of Three, Five and Seven Return Fizz Buzz Pop</h3>
+    <div class="card-contents">
+        <p>
+            As a games designer<br/>I want a multiple of three, five and seven to return 'fizz buzz pop'<br/>So that the game can be scored according to the rules</p>
+        <ul>
+            <li>
+    Given I have started the game<br/>When I enter $number<br/>Then $result is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Result</th>
+                </tr>
+        <tr>
+                <td>105</td>
+                <td>fizz buzz pop</td>
+                </tr>
+        <tr>
+                <td>210</td>
+                <td>fizz buzz pop</td>
+                </tr>
+        <tr>
+                <td>315</td>
+                <td>fizz buzz pop</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div></div><div class="feature">
+    <h2>Feature 3 - Creating Fizz Buzz Variations</h2>
+
+    <p>
+        So not that many people have actually heard of or played Fizz Buzz Pop, probably because the substitution words are different in different countries across the world. We're going to give players the ability to create their own substitution words and link them to multiples of certain numbers, and we need you to make this possible.</p>
+    <div class="row"><div class="card">
+    <h3>Using a Custom Substitution</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want to be able to choose my own substitutions<br/>So that I can tailor the game to my preferences</p>
+        <ul>
+            <li>
+    Given I have substituted multiples of two for 'fuzz'<br/>When I enter $number<br/>Then $result is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Result</th>
+                </tr>
+        <tr>
+                <td>1</td>
+                <td>1</td>
+                </tr>
+        <tr>
+                <td>2</td>
+                <td>fuzz</td>
+                </tr>
+        <tr>
+                <td>8</td>
+                <td>fuzz</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div><div class="card">
+    <h3>Linking Custom Substitutions Together</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want my substitutions to work the same way as Fizz Buzz<br/>So that the essence of the game remains the same</p>
+        <ul>
+            <li>
+    Given I have substituted multiples of two for 'fuzz'<br/>And I have substituted multiples of three for 'bizz'<br/>When I enter $number<br/>Then $result is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Result</th>
+                </tr>
+        <tr>
+                <td>4</td>
+                <td>fuzz</td>
+                </tr>
+        <tr>
+                <td>9</td>
+                <td>bizz</td>
+                </tr>
+        <tr>
+                <td>12</td>
+                <td>fuzz bizz</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     data-ad-client="ca-pub-5205110041821805"
+     data-ad-slot="5912700779"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div>
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://agilekatas.co.uk/cookies","theme":"dark-bottom"};
+</script>
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/cookieConsent.js"></script>
+<script type="text/javascript" src="/static/js/navigation.js"></script>
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript" src="/static/js/ajaxPost.js"></script>
+<script type="text/javascript" src="/static/js/contactForm.js"></script>
+<script type="text/javascript" src="/static/js/subscribeForm.js"></script>
+<script src="/static/js/kataTestCases.js"></script>
+</body>
+</html>

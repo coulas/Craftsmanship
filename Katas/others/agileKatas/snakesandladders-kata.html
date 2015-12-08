@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:jsp="http://www.w3.org/2001/XMLSchema">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agile Katas Snakes and Ladders Kata - Create the classic board game to play against both human and computer players with custom rules.">
+    <meta name="author" content="Sean O'Toole">
+    <link rel="shortcut icon" href="/static/ico/SnakesAndLaddersKata.png">
+
+    <title>Snakes and Ladders Kata | Agile Katas</title>
+
+    <link rel="stylesheet" href="/static/css/style.min.css">
+</head>
+<body>
+<nav id="navigation" class="navigation katas">
+    <div class="container">
+        <ul>
+            <li >
+                <a href="/">Agile Katas</a>
+            </li>
+            <li class="active">
+                <a href="/katas">Katas</a>
+            </li>
+            <li >
+                <a href="/learn">Learn</a>
+            </li>
+            <li >
+                <a href="/about">About</a>
+            </li>
+            <li >
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+        <a href="#" id="pull">Menu</a>
+    </div>
+</nav>
+<div class="container">
+    <h1>Snakes and Ladders Kata</h1>
+
+    <div class="description">
+        <img src="/static/img/katas/kata_snakesandladders.png" alt="Snakes and Ladders Kata" align="left"/>
+        <p>Snakes and Ladders is a board game involving two or more players rolling dice in order to move their tokens across a board. The board is made up of a collection of numbered squares and is adorned with 'snakes' and 'ladders', which link two squares on the board- snakes link the squares downwards whilst ladders link them going upwards. This means that landing at the bottom of a ladder moves you to the top of that ladder, whereas landing on the top of a snake moves you to the bottom of that snake. The objective of the game is to get your token to the final square before your opponents do.</p>
+        <p>From a technical point of view, the implementation of this game needs to be platform agnostic. We are going to want to launch this game on multiple devices and need a solid, robust game library which we can use as the backend for every frontend we stick on it. For this reason, we are not interested in the frontend you choose to use to test the game, only that the core game logic is separate and tested. </p>
+        </div>
+    <hr>
+    <div class="features">
+        <div class="feature">
+    <h2>Feature 1 - Moving Your Token</h2>
+
+    <p>
+        The first feature we want implemented is the ability to move your token across the board using dice rolls. Players will need the ability to roll a dice, move their token the number of squares indicated by the dice roll and should win if they land on the final square.</p>
+    <div class="row"><div class="card">
+    <h3>Token Can Move Across the Board</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want to be able to move my token<br/>So that I can get closer to the goal</p>
+        <ul>
+            <li>
+    Given the game is started<br/>When the token is placed on the board<br/>Then the token is on square 1</li><li>
+    Given the token is on square 1<br/>When the token is moved 3 spaces<br/>Then the token is on square 4</li><li>
+    Given the token is on square 1<br/>When the token is moved 3 spaces<br/>And then it is moved 4 spaces<br/>Then the token is on square 8</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div><div class="card">
+    <h3>Moves Are Determined By Dice Rolls</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want to move my token based on the roll of a die<br/>So that there is an element of chance in the game</p>
+        <ul>
+            <li>
+    Given the game is started<br/>When the player rolls a die<br/>Then the result should be between 1-6 inclusive</li><li>
+    Given the player rolls a 4<br/>When they move their token<br/>Then the token should move 4 spaces</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div></div><div class="row"><div class="card">
+    <h3>Player Can Win the Game</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want to be able to win the game<br/>So that I can gloat to everyone around</p>
+        <ul>
+            <li>
+    Given the token is on square 97<br/>When the token is moved 3 spaces<br/>Then the token is on square 100<br/>And the player has won the game</li><li>
+    Given the token is on square 97<br/>When the token is moved 4 spaces<br/>Then the token is on square 97<br/>And the player has not won the game</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div></div></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     data-ad-client="ca-pub-5205110041821805"
+     data-ad-slot="5912700779"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script><div class="feature">
+    <h2>Feature 2 - Snakes and Ladders</h2>
+
+    <p>
+        The second feature we would like is an additional element of chance in the form of implementing snakes and ladders on the game board and having them move the player's token up and down the board.</p>
+    <div class="row"><div class="card">
+    <h3>Snakes Go Down, Not Up</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want snakes to move my token down<br/>So that the game is more fun</p>
+        <ul>
+            <li>
+    Given there is a snake connecting squares 2 and 12<br/>When the token lands on square 12<br/>Then the token is on square 2</li><li>
+    Given there is a snake connecting squares 2 and 12<br/>When the token lands on square 2<br/>Then the token is on square 2</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div><div class="card">
+    <h3>Ladders Go Up, Not Down</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want ladders to move my token up<br/>So that the game is more fun</p>
+        <ul>
+            <li>
+    Given there is a ladder connecting squares 2 and 12<br/>When the token lands on square 2<br/>Then the token is on square 12</li><li>
+    Given there is a ladder connecting squares 2 and 12<br/>When the token lands on square 12<br/>Then the token is on square 12</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div></div></div><div class="feature">
+    <h2>Feature 3 - Multiple Players</h2>
+
+    <p>
+        Another feature for the game that we would like is the ability to play it using multiple players. The number of players will be selected on the front end. We are only looking at using human players now, but may use computer controller players later.</p>
+    <div class="row"><div class="card">
+    <h3>Determining Play Order</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want to influence the play order<br/>So that player 1 doesn't always go first</p>
+        <ul>
+            <li>
+    Given there are two players<br/>When the game is started<br/>Then the players must roll dice to determine their play order</li><li>
+    Given the players are rolling to determine play order<br/>When Player 1 rolls higher than Player 2<br/>Then Player 1 rolls first</li><li>
+    Given the players are rolling to determine play order<br/>When Player 2 rolls higher than Player 1<br/>Then Player 2 rolls first</li><li>
+    Given the players are rolling to determine play order<br/>When Player 1 rolls the same as Player 2<br/>Then the players must roll again</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div><div class="card">
+    <h3>Following Play Order</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want to follow the play order<br/>So that the game is more fair</p>
+        <ul>
+            <li>
+    Given it is Player 1's turn<br/>When they have moved their token<br/>Then it is Player 2's turn</li><li>
+    Given it is Player 2's turn<br/>When they have moved their token<br/>Then it is Player 1's turn</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div></div></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     data-ad-client="ca-pub-5205110041821805"
+     data-ad-slot="5912700779"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script><div class="feature">
+    <h2>Feature 4 - Computer Controlled Character</h2>
+
+    <p>
+        The fourth feature that we would like to see is the ability to play against computer controlled characters instead of just using human players. </p>
+    <div class="row"><div class="card">
+    <h3>Computer Play Order</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want to start a game against the computer<br/>So that I can play even when I don't have friends</p>
+        <ul>
+            <li>
+    Given there is a computer controller character<br/>When the game is started<br/>Then the computer should roll for it's turn order</li><li>
+    Given there is a computer controller character<br/>When it is that character's turn<br/>Then they should roll the dice and move their token</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div><div class="card">
+    <h3>Computer Playing</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want to play against the computer<br/>So that I can play even when I don't have friends</p>
+        <ul>
+            <li>
+    Given the game is started<br/>When it is the computer's turn<br/>Then the computer should roll and move it's token</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div></div></div></div>
+</div>
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://agilekatas.co.uk/cookies","theme":"dark-bottom"};
+</script>
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/cookieConsent.js"></script>
+<script type="text/javascript" src="/static/js/navigation.js"></script>
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript" src="/static/js/ajaxPost.js"></script>
+<script type="text/javascript" src="/static/js/contactForm.js"></script>
+<script type="text/javascript" src="/static/js/subscribeForm.js"></script>
+<script src="/static/js/kataTestCases.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:jsp="http://www.w3.org/2001/XMLSchema">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agile Katas Tennis Kata - Implement a general purpose tennis scoring program that we can use in both games and software">
+    <meta name="author" content="Sean O'Toole">
+    <link rel="shortcut icon" href="/static/ico/TennisKata.png">
+
+    <title>Tennis Kata | Agile Katas</title>
+
+    <link rel="stylesheet" href="/static/css/style.min.css">
+</head>
+<body>
+<nav id="navigation" class="navigation katas">
+    <div class="container">
+        <ul>
+            <li >
+                <a href="/">Agile Katas</a>
+            </li>
+            <li class="active">
+                <a href="/katas">Katas</a>
+            </li>
+            <li >
+                <a href="/learn">Learn</a>
+            </li>
+            <li >
+                <a href="/about">About</a>
+            </li>
+            <li >
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+        <a href="#" id="pull">Menu</a>
+    </div>
+</nav>
+<div class="container">
+    <h1>Tennis Kata</h1>
+
+    <div class="description">
+        <img src="/static/img/katas/kata_tennis.png" alt="Tennis Kata" align="left"/>
+        <p>Tennis is a ball and racquet game that is scored in an interesting way. Instead of scoring the game using consecutive integers to denote number of points won by the players, it uses the scoring 0, 15, 30, 40, and A.</p>
+        <p>There are also special rules on how to score a game in tennis. A player must score at least four points in total and two more than their opponent to win. When the points are four, and the scores are equal, then the score is 'deuce' (40:40). When the points are four or more, and a player has one point more than their opponent, then the score is 'advantage' (A:40).</p>
+        </div>
+    <hr>
+    <div class="features">
+        <div class="feature">
+    <h2>Feature 1 - Scoring a Game in Real Time</h2>
+
+    <p>
+        We want a program that can be used to score a game in real time, so we can use it for all of the tennis related endeavours we plan to undertake in the future. To begin with, we're going to need a way to update the score when a player wins a point, see what the current score is after each service, and see if their is a winner based on the current score and the rules above. </p>
+    <div class="row"><div class="card">
+    <h3>Winning a Point Increases Score Correctly</h3>
+    <div class="card-contents">
+        <p>
+            As a library user<br/>I want the score to increase when a player wins a point<br/>So that I can display the current score correctly</p>
+        <ul>
+            <li>
+    Given the score is 0:0<br/>When the server wins a point<br/>Then the score is 15:0</li><li>
+    Given the score is 15:15<br/>When the receiver wins a point<br/>Then the score is 15:30</li><li>
+    Given the score is 30:30<br/>When the server wins a point<br/>Then the score is 40:30</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div><div class="card">
+    <h3>Deuce and Advantage are Scored Correctly</h3>
+    <div class="card-contents">
+        <p>
+            As a library user<br/>I want deuce and advantage to be scored correctly<br/>So that I can display the score correctly</p>
+        <ul>
+            <li>
+    Given the score is 40:40<br/>When the receiver wins a point<br/>Then the score should be 40:A</li><li>
+    Given the score is A:40<br/>When the receiver wins a point<br/>Then the score should be 40:40</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div></div><div class="row"><div class="card">
+    <h3>Winning Points are Scored Correctly</h3>
+    <div class="card-contents">
+        <p>
+            As a library user<br/>I want the winning point to be scored correctly<br/>So that I can display the winner</p>
+        <ul>
+            <li>
+    Given the score is 40:30<br/>When the server wins a point<br/>Then the server should win</li><li>
+    Given the score is 40:A<br/>When the receiver wins a point<br/>Then the receiver should win</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div></div></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     data-ad-client="ca-pub-5205110041821805"
+     data-ad-slot="5912700779"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div>
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://agilekatas.co.uk/cookies","theme":"dark-bottom"};
+</script>
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/cookieConsent.js"></script>
+<script type="text/javascript" src="/static/js/navigation.js"></script>
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript" src="/static/js/ajaxPost.js"></script>
+<script type="text/javascript" src="/static/js/contactForm.js"></script>
+<script type="text/javascript" src="/static/js/subscribeForm.js"></script>
+<script src="/static/js/kataTestCases.js"></script>
+</body>
+</html>

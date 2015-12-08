@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:jsp="http://www.w3.org/2001/XMLSchema">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agile Katas Roman Numeral Kata - Write a Roman numeral converter, that will take a standard Arabic number and convert it to a Roman numeral.">
+    <meta name="author" content="Sean O'Toole">
+    <link rel="shortcut icon" href="/static/ico/RomanNumeralsKata.png">
+
+    <title>Roman Numerals Kata | Agile Katas</title>
+
+    <link rel="stylesheet" href="/static/css/style.min.css">
+</head>
+<body>
+<nav id="navigation" class="navigation katas">
+    <div class="container">
+        <ul>
+            <li >
+                <a href="/">Agile Katas</a>
+            </li>
+            <li class="active">
+                <a href="/katas">Katas</a>
+            </li>
+            <li >
+                <a href="/learn">Learn</a>
+            </li>
+            <li >
+                <a href="/about">About</a>
+            </li>
+            <li >
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+        <a href="#" id="pull">Menu</a>
+    </div>
+</nav>
+<div class="container">
+    <h1>Roman Numerals Kata</h1>
+
+    <div class="description">
+        <img src="/static/img/katas/kata_romannumerals.png" alt="Roman Numerals Kata" align="left"/>
+        <p>The Romans wrote their numbers using letters; specifically the letters 'I' meaning '1', 'V' meaning '5', 'X' meaning '10', 'L' meaning '50', 'C' meaning '100', 'D' meaning '500', and 'M' meaning '1000'. There were certain rules that the numerals followed which should be observed.</p>
+        <p>The symbols 'I', 'X', 'C', and 'M' can be repeated at most 3 times in a row. The symbols 'V', 'L', and 'D' can never be repeated. The '1' symbols ('I', 'X', and 'C') can only be subtracted from the 2 next highest values ('IV' and 'IX', 'XL' and 'XC', 'CD' and 'CM'). Only one subtraction can be made per numeral ('XC' is allowed, 'XXC' is not). The '5' symbols ('V', 'L', and 'D') can never be subtracted. </p>
+        </div>
+    <hr>
+    <div class="features">
+        <div class="feature">
+    <h2>Feature 1 - Converting Arabic to Roman</h2>
+
+    <p>
+        We would like to be able to convert Arabic numbers into their Roman numeral equivalents. We just need some kind of program that can accept a numeric input and output the Roman numeral for the input number.</p>
+    <div class="row"><div class="card">
+    <h3>Convert Arabic Number to Roman Numeral</h3>
+    <div class="card-contents">
+        <p>
+            As a game developer<br/>I want to be able to convert a number to a numeral<br/>So that I can label my game releases using Roman numerals</p>
+        <ul>
+            <li>
+    Given I have started the converter<br/>When I enter $number<br/>Then $numeral is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Numeral</th>
+                </tr>
+        <tr>
+                <td>1</td>
+                <td>I</td>
+                </tr>
+        <tr>
+                <td>3</td>
+                <td>III</td>
+                </tr>
+        <tr>
+                <td>9</td>
+                <td>IX</td>
+                </tr>
+        <tr>
+                <td>1066</td>
+                <td>MLXVI</td>
+                </tr>
+        <tr>
+                <td>1989</td>
+                <td>MCMLXXXIX</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     data-ad-client="ca-pub-5205110041821805"
+     data-ad-slot="5912700779"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script><div class="feature">
+    <h2>Feature 2 - Converting Roman to Arabic</h2>
+
+    <p>
+        The change from the Arabic numbering system to using Roman numerals has gone really well, all things considered. There is a slight issue in that sales of the latest games have dropped off, and when questioned people have said it's because they no longer know what the latest version is, as there's no easy to read number. To remedy this, we are going to install Roman numeral to Arabic number converters everywhere we sell games, so people can work out which is the latest game. </p>
+    <div class="row"><div class="card">
+    <h3>Convert Roman Numeral to Arabic Number</h3>
+    <div class="card-contents">
+        <p>
+            As a marketing manager<br/>I want customers to be able to convert numerals to numbers<br/>So that they can buy the latest version of the game</p>
+        <ul>
+            <li>
+    Given I have started the converter<br/>When I enter $numeral<br/>Then $number is returned</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Numeral</th>
+                <th>Number</th>
+                </tr>
+        <tr>
+                <td>I</td>
+                <td>1</td>
+                </tr>
+        <tr>
+                <td>III</td>
+                <td>3</td>
+                </tr>
+        <tr>
+                <td>IX</td>
+                <td>9</td>
+                </tr>
+        <tr>
+                <td>MLXVI</td>
+                <td>1066</td>
+                </tr>
+        <tr>
+                <td>MCMLXXXIX</td>
+                <td>1989</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div></div></div>
+</div>
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://agilekatas.co.uk/cookies","theme":"dark-bottom"};
+</script>
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/cookieConsent.js"></script>
+<script type="text/javascript" src="/static/js/navigation.js"></script>
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript" src="/static/js/ajaxPost.js"></script>
+<script type="text/javascript" src="/static/js/contactForm.js"></script>
+<script type="text/javascript" src="/static/js/subscribeForm.js"></script>
+<script src="/static/js/kataTestCases.js"></script>
+</body>
+</html>

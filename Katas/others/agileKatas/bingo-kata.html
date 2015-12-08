@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:jsp="http://www.w3.org/2001/XMLSchema">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agile Katas Bingo Kata - Make a game of Bingo, which can generate Bingo cards, call numbers, and check winning tickets.">
+    <meta name="author" content="Sean O'Toole">
+    <link rel="shortcut icon" href="/static/ico/BingoKata.png">
+
+    <title>Bingo Kata | Agile Katas</title>
+
+    <link rel="stylesheet" href="/static/css/style.min.css">
+</head>
+<body>
+<nav id="navigation" class="navigation katas">
+    <div class="container">
+        <ul>
+            <li >
+                <a href="/">Agile Katas</a>
+            </li>
+            <li class="active">
+                <a href="/katas">Katas</a>
+            </li>
+            <li >
+                <a href="/learn">Learn</a>
+            </li>
+            <li >
+                <a href="/about">About</a>
+            </li>
+            <li >
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+        <a href="#" id="pull">Menu</a>
+    </div>
+</nav>
+<div class="container">
+    <h1>Bingo Kata</h1>
+
+    <div class="description">
+        <img src="/static/img/katas/kata_bingo.png" alt="Bingo Kata" align="left"/>
+        <p>Bingo is a game of chance played using cards with numbers printed on them, which are marked off of the card as the caller reads out some manner of random numbers. Play usually ceases once a certain pattern is achieved on a card, where the winner will shout out "Bingo!" in order to let the caller and the room know that there may be a winner.</p>
+        <p>There are lots of different variations of Bingo, each with their own specific rules. Classic US Bingo is perhaps the most well known, where the game is played using a 5x5 grid of numbers between 1 and 75, with a FREE space in the middle. There is also a UK version of Bingo, which uses a 9x3 grid of spaces containing numbers between 1 and 90, of which five spaces on each row are filled in.</p>
+        </div>
+    <hr>
+    <div class="features">
+        <div class="feature">
+    <h2>Feature 1 - Playing Bingo</h2>
+
+    <p>
+        To get the best reach for our Bingo game, we are going to model it on the US version to begin with. To make this work, we are going to need to be able to call out numbers, generate Bingo cards for people to play with, and check their cards when someone calls Bingo. Once we have got these basics in place, we can then start to add new features or tweak the way it works.</p>
+    <div class="row"><div class="card">
+    <h3>Calling Bingo Numbers</h3>
+    <div class="card-contents">
+        <p>
+            As a VP of Gaming<br/>I want my game to call out Bingo numbers<br/>So that people can play with their cards</p>
+        <ul>
+            <li>
+    Given I have a Bingo caller<br/>When I call a number<br/>Then the number is between 1 and 75 inclusive</li><li>
+    Given I have a Bingo caller<br/>When I call a number 75 times<br/>Then all numbers between 1 and 75 are present<br/>And no number has been called more than once</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div><div class="card">
+    <h3>Generating Bingo Cards</h3>
+    <div class="card-contents">
+        <p>
+            As a VP of Gaming<br/>I want my game to generate random Bingo cards<br/>So that people can play</p>
+        <ul>
+            <li>
+    Given I have a Bingo card generator<br/>When I generate a Bingo card<br/>Then the generated card has 25 unique spaces<br/>And column $column only contains numbers between $lowerBound and $upperBound inclusive<br/>And the generated card has 1 FREE space in the middle</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Column</th>
+                <th>Lower Bound</th>
+                <th>Upper Bound</th>
+                </tr>
+        <tr>
+                <td>B</td>
+                <td>1</td>
+                <td>15</td>
+                </tr>
+        <tr>
+                <td>I</td>
+                <td>16</td>
+                <td>30</td>
+                </tr>
+        <tr>
+                <td>N</td>
+                <td>31</td>
+                <td>45</td>
+                </tr>
+        <tr>
+                <td>G</td>
+                <td>46</td>
+                <td>60</td>
+                </tr>
+        <tr>
+                <td>O</td>
+                <td>61</td>
+                <td>75</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div><div class="row"><div class="card">
+    <h3>Checking Bingo Cards</h3>
+    <div class="card-contents">
+        <p>
+            As a VP of Gaming<br/>I want my game to check player's cards when they call Bingo<br/>So that a winner can be decided</p>
+        <ul>
+            <li>
+    Given a player calls Bingo after all numbers on their card have been called<br/>When I check the card<br/>Then the player is the winner</li><li>
+    Given a player calls Bingo before all numbers on their card have been called<br/>When I check the card<br/>Then the player is not the winner</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div></div></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     data-ad-client="ca-pub-5205110041821805"
+     data-ad-slot="5912700779"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div>
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://agilekatas.co.uk/cookies","theme":"dark-bottom"};
+</script>
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/cookieConsent.js"></script>
+<script type="text/javascript" src="/static/js/navigation.js"></script>
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript" src="/static/js/ajaxPost.js"></script>
+<script type="text/javascript" src="/static/js/contactForm.js"></script>
+<script type="text/javascript" src="/static/js/subscribeForm.js"></script>
+<script src="/static/js/kataTestCases.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:jsp="http://www.w3.org/2001/XMLSchema">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agile Katas Rock Paper Scissors Kata - Write a Rock Paper Scissors game with extensible rules to be played against both human and computer opponents.">
+    <meta name="author" content="Sean O'Toole">
+    <link rel="shortcut icon" href="/static/ico/RockPaperScissorsKata.png">
+
+    <title>Rock Paper Scissors Kata | Agile Katas</title>
+
+    <link rel="stylesheet" href="/static/css/style.min.css">
+</head>
+<body>
+<nav id="navigation" class="navigation katas">
+    <div class="container">
+        <ul>
+            <li >
+                <a href="/">Agile Katas</a>
+            </li>
+            <li class="active">
+                <a href="/katas">Katas</a>
+            </li>
+            <li >
+                <a href="/learn">Learn</a>
+            </li>
+            <li >
+                <a href="/about">About</a>
+            </li>
+            <li >
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+        <a href="#" id="pull">Menu</a>
+    </div>
+</nav>
+<div class="container">
+    <h1>Rock Paper Scissors Kata</h1>
+
+    <div class="description">
+        <img src="/static/img/katas/kata_rockpaperscissors.png" alt="Rock Paper Scissors Kata" align="left"/>
+        <p>Rock Paper Scissors is a game involving two players making pre-defined hand gestures at each other. The gesture that each player uses is played against the other, with a winner being decided based on the rules being used.</p>
+        <p>The three gestures used in base Rock Paper Scissors are... well... rock, paper, and scissors. The way these are scored is as such: Rock beats Scissors, Scissors beats Paper, Paper beats Rock. It gets a lot more complicated when you introduce new gestures, but let's keep it simple for now.</p>
+        <p>As always, we want you to create a backend for the game that we can use to hook up to our many game clients we're going to be creating. Once again, feel free to use any front-end to test your program.</p>
+        </div>
+    <hr>
+    <div class="features">
+        <div class="feature">
+    <h2>Feature 1 - Implementing the Basic Rules</h2>
+
+    <p>
+        We're definitely going to need a way to decide who has won and who has lost, or whether the round has ended in a draw. Using the rules provided, give us an engine for deciding this based on the player's moves.</p>
+    <div class="row"><div class="card">
+    <h3>Rock Beats Scissors</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want rock to beat scissors<br/>So that I can play with rules I'm familiar with</p>
+        <ul>
+            <li>
+    Given I have chosen rock<br/>When the opponent chooses scissors<br/>Then I should win</li><li>
+    Given I have chosen scissors<br/>When the opponent chooses rock<br/>Then they should win</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div><div class="card">
+    <h3>Scissors Beats Paper</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want scissors to beat paper<br/>So that I can play with rules I'm familiar with</p>
+        <ul>
+            <li>
+    Given I have chosen scissors<br/>When the opponent chooses paper<br/>Then I should win</li><li>
+    Given I have chosen paper<br/>When the opponent chooses scissors<br/>Then they should win</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div></div><div class="row"><div class="card">
+    <h3>Paper Beats Rock</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want paper to beat rock<br/>So that I can play with rules I'm familiar with</p>
+        <ul>
+            <li>
+    Given I have chosen paper<br/>When the opponent chooses rock<br/>Then I should win</li><li>
+    Given I have chosen rock<br/>When the opponent chooses paper<br/>Then they should win</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div><div class="card">
+    <h3>Same Moves Result in Draw</h3>
+    <div class="card-contents">
+        <p>
+            As a player<br/>I want the same moves to draw<br/>So that I can play with rules I'm familiar with</p>
+        <ul>
+            <li>
+    Given I have chosen rock<br/>When the opponent chooses rock<br/>Then it should be a draw</li><li>
+    Given I have chosen scissors<br/>When the opponent chooses scissors<br/>Then it should be a draw</li><li>
+    Given I have chosen paper<br/>When the opponent chooses paper<br/>Then it should be a draw</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        </tbody>
+    </table>
+</div></div></div></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     data-ad-client="ca-pub-5205110041821805"
+     data-ad-slot="5912700779"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div>
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://agilekatas.co.uk/cookies","theme":"dark-bottom"};
+</script>
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/cookieConsent.js"></script>
+<script type="text/javascript" src="/static/js/navigation.js"></script>
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript" src="/static/js/ajaxPost.js"></script>
+<script type="text/javascript" src="/static/js/contactForm.js"></script>
+<script type="text/javascript" src="/static/js/subscribeForm.js"></script>
+<script src="/static/js/kataTestCases.js"></script>
+</body>
+</html>

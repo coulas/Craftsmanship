@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:jsp="http://www.w3.org/2001/XMLSchema">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agile Katas Connect Four Kata - Create a Connect Four game. Place tokens on a grid, check to see if anyone has won, then maybe make some variations!">
+    <meta name="author" content="Sean O'Toole">
+    <link rel="shortcut icon" href="/static/ico/ConnectFourKata.png">
+
+    <title>Connect Four Kata | Agile Katas</title>
+
+    <link rel="stylesheet" href="/static/css/style.min.css">
+</head>
+<body>
+<nav id="navigation" class="navigation katas">
+    <div class="container">
+        <ul>
+            <li >
+                <a href="/">Agile Katas</a>
+            </li>
+            <li class="active">
+                <a href="/katas">Katas</a>
+            </li>
+            <li >
+                <a href="/learn">Learn</a>
+            </li>
+            <li >
+                <a href="/about">About</a>
+            </li>
+            <li >
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+        <a href="#" id="pull">Menu</a>
+    </div>
+</nav>
+<div class="container">
+    <h1>Connect Four Kata</h1>
+
+    <div class="description">
+        <img src="/static/img/katas/kata_connectfour.png" alt="Connect Four Kata" align="left"/>
+        <p>Connect Four is a two player game in which the players take turns dropping coloured tokens into a 7x6 grid of slots. The aim of the game is to connect four of your tokens together either horizontally, verically or diagonally before your opponent can connect four of theirs.</p>
+        <p>Unsurprisingly for a game that was published in 1974 and released all over the world, there are several variations of the classic Connect Four game, from changing the size of the grid to allowing players to remove their opponents tokens. This will make the computer controller player a lot more interesting- classic Connect Four has been solved and as such there is a perfect play order- but this does not apply to the variations. </p>
+        </div>
+    <hr>
+    <div class="features">
+        <div class="feature">
+    <h2>Feature 1 - Playing Connect Four</h2>
+
+    <p>
+        Let's start with the basics. We want to be able to actually play the game. No fancy stuff, so we'll just be looking at classic Connect Four for now. So what we're going to need is a grid, 7 columns with 6 rows. We're going to need some way to place tokens in the grid referenced by column, and they'll need to fall down to the correct position. We're also going to need a way to see if the game is over, so checking whether the game has been won- remember, it can be horizontal, vertical, or diagonal. </p>
+    <div class="row"><div class="card">
+    <h3>Placing Tokens</h3>
+    <div class="card-contents">
+        <p>
+            As a VP of Gaming<br/>I want players to be able to place tokens<br/>So that they can play</p>
+        <ul>
+            <li>
+    Given a grid with $number tokens in column $column<br/>When I place a token in that column<br/>Then that token should be in row $row</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Number</th>
+                <th>Column</th>
+                <th>Row</th>
+                </tr>
+        <tr>
+                <td>0</td>
+                <td>B</td>
+                <td>1</td>
+                </tr>
+        <tr>
+                <td>2</td>
+                <td>D</td>
+                <td>3</td>
+                </tr>
+        <tr>
+                <td>5</td>
+                <td>F</td>
+                <td>6</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div><div class="card">
+    <h3>Checking Four in a Row</h3>
+    <div class="card-contents">
+        <p>
+            As a VP of Gaming<br/>I want my game to check for winners<br/>So that a player can win the game</p>
+        <ul>
+            <li>
+    Given I have a grid like $grid<br/>When I check for winners<br/>Then the winner should be $winner</li></ul>
+    </div>
+    <div class="test-cases">
+    <table>
+        <tbody>
+        <tr>
+                <th>Grid</th>
+                <th>Winner</th>
+                </tr>
+        <tr>
+                <td>OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO
+YYYYOOO</td>
+                <td>Yellow</td>
+                </tr>
+        <tr>
+                <td>OOOOOOO
+OOOOOOO
+ROOOOOO
+ROOOOOO
+ROOOOOO
+ROOOOOO</td>
+                <td>Red</td>
+                </tr>
+        <tr>
+                <td>OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO</td>
+                <td>None</td>
+                </tr>
+        <tr>
+                <td>OOOOOOO
+OOOOOOO
+RYRROOO
+YYRYOOO
+RRYYOOO
+RYRYOOO</td>
+                <td>Red</td>
+                </tr>
+        <tr>
+                <td>OOOOOOO
+OOOOOOO
+YYRYOOO
+YYRYOOO
+RRYROOO
+RYRYOOO</td>
+                <td>Yellow</td>
+                </tr>
+        </tbody>
+    </table>
+</div><div class="test-case-link">
+            <a href="#" class="flip">View Test Cases</a>
+        </div>
+    </div></div></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     data-ad-client="ca-pub-5205110041821805"
+     data-ad-slot="5912700779"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div>
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://agilekatas.co.uk/cookies","theme":"dark-bottom"};
+</script>
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/cookieConsent.js"></script>
+<script type="text/javascript" src="/static/js/navigation.js"></script>
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript" src="/static/js/ajaxPost.js"></script>
+<script type="text/javascript" src="/static/js/contactForm.js"></script>
+<script type="text/javascript" src="/static/js/subscribeForm.js"></script>
+<script src="/static/js/kataTestCases.js"></script>
+</body>
+</html>
