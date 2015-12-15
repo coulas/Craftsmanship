@@ -4,7 +4,7 @@
 Write a program to score a game of Ten-Pin Bowling.
 
 <table>
-<tr><td>knocked down pins</td><td>1 | 4</td><td>4 | 5</td><td>6 | 4</td><td>5 | 5</td><td>10</td><td>0 | 1</td><td>7 | 3</td><td>6 | 4</td><td>2 | 8</td><td>2 | 8 | 6</td></tr>
+<tr><td>knocked down pins</td><td>1 | 4</td><td>4 | 5</td><td>6 | 4</td><td>5 | 5</td><td>10</td><td>0 | 1</td><td>7 | 3</td><td>6 | 4</td><td>10</td><td>2 | 8 | 6</td></tr>
 <tr><td>score</td><td>5</td><td>14</td><td>29</td><td>49</td><td>60</td><td>61</td><td>77</td><td>97</td><td>117</td><td>133</td></tr>
 </table>
 The game consists of 10 frames as shown above.  In each frame the player has
