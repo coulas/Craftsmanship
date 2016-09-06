@@ -19,3 +19,7 @@ The part o covering ti with test is tedious, but worth it !
 
 ## Trivia
 Heard good about it, I must try it !
+
+## Mikado Method
+Actually not a kata, but a book title.
+This book is about refactoring code and use a Kata.
