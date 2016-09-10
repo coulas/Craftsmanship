@@ -1,6 +1,7 @@
 
 ## incremental katas
-[Fruit shop](http://fr.slideshare.net/brunoboucard/fruit-shop-techdays-2015) is about doint small features quickly with some typical surprises so you end with default you see in real world long term softwares (unconvenient design also called "historical", etc.)
+[Fruit shop](http://fr.slideshare.net/brunoboucard/fruit-shop-techdays-2015) is about doing small features quickly with some typical surprises so you end with default you see in real world long term softwares (unconvenient design also called "historical", etc.)
+It is based on a ["lean code" kata](http://fr.slideshare.net/chrismdp/lean-code).
 
 [coffee machine](http://simcap.github.io/coffeemachine/index.html) is about feeling how you behave with TDD in a set of user stories.
 
