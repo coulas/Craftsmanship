@@ -1,4 +1,9 @@
 
+## incremental katas
+[Fruit shop](http://fr.slideshare.net/brunoboucard/fruit-shop-techdays-2015) is about doint small features quickly with some typical surprises so you end with default you see in real world long term softwares (unconvenient design also called "historical", etc.)
+[coffee machine](http://simcap.github.io/coffeemachine/index.html) is about feeling how you behave with TDD in a set of user stories.
+[a series of incremental katas](https://github.com/Gianfrancoalongi/incremental_katas)
+
 ## Cyber-dojo
 [from cyber-dojo](http://cyber-dojo.org/) :
 You'll have almost all public green field katas here.
